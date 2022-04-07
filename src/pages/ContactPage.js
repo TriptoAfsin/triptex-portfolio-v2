@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, Link, Stack, Image, Flex, Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 function ContactPage() {

@@ -11,23 +11,19 @@ import {
 } from "@chakra-ui/react";
 
 import {
-    FadeWrapper,
-    FloatLeftWrapper,
-    FloatRightWrapper,
     FloatInWrapper,
-    FloatUpWrapper,
     LoaderSpinner1
   } from "../../../components/Navbar/Navbar.style";
 
 import { AiOutlineLink } from "react-icons/ai";
-//config import
-import portfolioInfo from "../../../config";
+// //config import
+// import portfolioInfo from "../../../config";
 
 function ProjectSection() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   //api data
-  const { data, error, isLoading, isSuccess, isError, refetch } =
+  const { data,  isLoading } =
     useGetMyProjectsQuery();
 
   useEffect(() => {

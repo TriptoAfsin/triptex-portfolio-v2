@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, Link, Stack, Image, Flex, Heading } from "@chakra-ui/react";
+import { Box, Image, Heading } from "@chakra-ui/react";
 import notFound from "../imgs/404.svg";
 
 function NotFoundPage() {

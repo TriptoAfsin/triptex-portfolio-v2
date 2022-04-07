@@ -5,8 +5,8 @@ import { useColorMode } from "@chakra-ui/react";
 
 
 function ParticleComponent({onCLick=true, onHover=false, speed=1.5, desktopAmount=20, mobileAmmount=10, area=900}) {
-    const { height, width } = useWindowDimensions();
-    const { colorMode, toggleColorMode } = useColorMode();
+    const { width } = useWindowDimensions();
+    const { colorMode } = useColorMode();
   return (
     <><Particles
     style={{
