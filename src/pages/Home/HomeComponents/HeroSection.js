@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Heading, useColorMode, Image, Text, Grid } from "@chakra-ui/react";
 import devImg from "../../../imgs/dev_new.jpg";
 import { SocialIcon } from "react-social-icons";
+import { Link } from 'react-router-dom'
 
 import { FaLinux } from "react-icons/fa";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
@@ -238,6 +239,7 @@ function HeroSection() {
               </Text>
               <FaLinux size="24" color={"#FFFFFF"} />
             </Box>
+            <Link to="/skills">
             <Box
               borderRadius={20}
               minWidth={"130px"}
@@ -257,6 +259,7 @@ function HeroSection() {
               </Text>
               <BsFillArrowUpRightCircleFill size="24" color={"#FFFFFF"} />
             </Box>
+            </Link>
           </Grid>
         </Box>
         </FloatRightWrapper>
