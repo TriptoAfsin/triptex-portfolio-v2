@@ -3,12 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Afshin Nahian Tripto" />
+    <meta property="og:description" content="Webdeveloper || Student || Learner|" />
+    <meta property="og:url" content="./index.html" />
+    <meta property="og:site_name" content="Tripto's Portfolio" />
+    <meta property="og:image" content="https://i.imgur.com/k8LrbYd.png" />
+    <link rel="icon" href="favicon.png" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/TriptoAfsin/rongila-css@2.11min/min/rongila.min.css"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="theme-color" content="#4949f3" />
+    <meta name="description" content="Hey I'm Afshin Nahian Tripto, I'm a freelance web developer based in Dhaka" />
+    <meta name="keywords" content="freelancer, dhaka, webdev, bangladesh, web developer, react, html, css, front end, javascript, node, cpanel" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -24,11 +31,40 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Tripto's Portfolio</title>
+    <style>
+      .loader {
+        margin: 5rem auto;
+        border: 16px solid #f3f3f3;
+        /* Light grey */
+        border-top: 16px solid #4949f3;
+        /* Blue */
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1s linear infinite;
+      }
+
+      .grey{
+        background-color: #1e1e1e;
+      }
+  
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+  
+        100% {
+          transform: rotate(360deg);
+        }
+      }  
+    </style>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <noscript>You need to enable JavaScript to run this app.😀</noscript>
+    <div id="root">
+      <div class="loader"></div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
