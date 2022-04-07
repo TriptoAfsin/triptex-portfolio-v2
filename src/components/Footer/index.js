@@ -3,7 +3,6 @@ import {
   Box,
   Heading,
   useColorMode,
-  Image,
   Text,
   Grid,
 } from "@chakra-ui/react";
@@ -19,7 +18,7 @@ const LikedinUrl = portfolioInfo.socialLinks.socialLinkedin;
 const mailUrl = portfolioInfo.socialLinks.socialMail;
 
 function Footer({ grad1Color = "#339af0", grad2Color = "#4949f3" }) {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   const gradient = `linear(to-l, ${grad1Color}, ${grad2Color})`;
   return (
@@ -75,7 +74,7 @@ function Footer({ grad1Color = "#339af0", grad2Color = "#4949f3" }) {
           </Box>
         </Box>
       </Grid>
-      <Text textAlign={'center'} mb={5}> Made with 💝 by Afshin Nahian Tripto</Text>
+      <Text textAlign={'center'} mb={5} color={colorMode === "dark" ? "#ffffff" : "#ffffff"}> Made with 💝 by Afshin Nahian Tripto</Text>
       </Box>
     </>
   );

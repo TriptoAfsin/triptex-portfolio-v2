@@ -10,19 +10,15 @@ import { GrMysql } from "react-icons/gr";
 import {
   SiJavascript,
   SiReact,
-  SiPostgresql,
   SiGithub,
-  SiHeroku,
   SiNextdotjs,
 } from "react-icons/si";
 //config import
 import portfolioInfo from "../../../config";
 
 import {
-    FadeWrapper,
     FloatLeftWrapper,
     FloatRightWrapper,
-    SlideDownWrapper
   } from "../../../components/Navbar/Navbar.style";
 import ParticleComponent from "../ParticleComponent";
 
@@ -32,7 +28,7 @@ const LikedinUrl = portfolioInfo.socialLinks.socialLinkedin;
 const mailUrl = portfolioInfo.socialLinks.socialMail;
 
 function HeroSection() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <Box

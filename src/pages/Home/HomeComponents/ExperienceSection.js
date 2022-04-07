@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Box,
   Heading,
@@ -6,7 +6,6 @@ import {
   Image,
   Text,
   Grid,
-  IconButton,
   Button,
 } from "@chakra-ui/react";
 
@@ -14,18 +13,9 @@ import dhLogo from "../../../imgs/dh.png";
 import bpLogo from "../../../imgs/bp.png";
 import botLogo from "../../../imgs/bot.png";
 
-import {
-  FadeWrapper,
-  FloatLeftWrapper,
-  FloatRightWrapper,
-  FloatInWrapper,
-  FloatUpWrapper,
-} from "../../../components/Navbar/Navbar.style";
-
-import { AiOutlineLink } from "react-icons/ai";
 
 function ExperienceSection() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   console.count("Experience section renderd");
 

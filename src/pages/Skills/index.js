@@ -29,10 +29,6 @@ import {
 } from "react-icons/si";
 import { AiFillHtml5 } from "react-icons/ai";
 import {
-  FadeWrapper,
-  FloatLeftWrapper,
-  FloatRightWrapper,
-  SlideDownWrapper,
   FloatInWrapper,
 } from "../../components/Navbar/Navbar.style";
 
@@ -121,7 +117,7 @@ const othersTech = [
 ];
 
 function SkillsPage() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   let StackCard = ({
     title,

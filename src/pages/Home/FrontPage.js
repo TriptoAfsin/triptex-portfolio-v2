@@ -1,19 +1,15 @@
-import React, { useState, lazy } from "react";
-import { Box, Heading, useColorMode } from "@chakra-ui/react";
+import React from "react";
+import { Box } from "@chakra-ui/react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
-import useWindowDimensions from "../../utils/hooks/ResizeHandler";
+// import useWindowDimensions from "../../utils/hooks/ResizeHandler";
 import HeroSection from "./HomeComponents/HeroSection";
 import ProjectSection from "./HomeComponents/ProjectsSection";
 import ExperienceSection from "./HomeComponents/ExperienceSection";
 //import Particles  from "react-particles-js"; //particles js
-const Particles = lazy(() => import("react-tsparticles"));
+// const Particles = lazy(() => import("react-tsparticles"));
 
 function FrontPage() {
-
-    const { colorMode, toggleColorMode } = useColorMode()
-
-  const { height, width } = useWindowDimensions();
   return (
     <motion.div
       initial={{ opacity: 0 }}

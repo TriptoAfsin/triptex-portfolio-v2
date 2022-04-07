@@ -4,7 +4,6 @@ import { MdClose } from "react-icons/md";
 import { BiMenuAltLeft } from "react-icons/bi";
 import logo from "../../imgs/logo192.png";
 import {
-  FadeWrapper,
   FloatLeftWrapper,
   FloatRightWrapper,
 } from "./Navbar.style";
