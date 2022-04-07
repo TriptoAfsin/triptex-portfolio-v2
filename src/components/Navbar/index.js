@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Box, Text, Link, Stack, Image, Flex } from "@chakra-ui/react";
+import { Box, Text, Stack, Image, Flex } from "@chakra-ui/react";
 import { MdClose } from "react-icons/md";
 import { BiMenuAltLeft } from "react-icons/bi";
+import { Link } from 'react-router-dom'
 import logo from "../../imgs/logo192.png";
 import {
   FloatLeftWrapper,
@@ -13,7 +14,7 @@ const Logo = props => {
   return (
     <FloatLeftWrapper>
       <Box {...props} display={'flex'} flexDirection={'row'}>
-        <Link href={"/"}>
+        <Link to="/">
           <Image
             src={logo}
             alt="Afshin Nahian Tripto"
@@ -45,7 +46,7 @@ const MenuToggle = ({ toggle, isOpen }) => {
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
     <FloatRightWrapper>
-      <Link href={to}>
+      <Link to={to}>
         <Text display="block" {...rest}>
           {children}
         </Text>
