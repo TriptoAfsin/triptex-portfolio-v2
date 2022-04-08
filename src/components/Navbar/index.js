@@ -124,10 +124,10 @@ function Navbar(props) {
             pt={[4, 4, 0, 0]}
           >
             <MenuItem to="/">Home</MenuItem>
-            <MenuItem to="/cv/Afshin Nahian Tripto-WebDev.pdf">CV</MenuItem>
+            <FloatRightWrapper><a href="/cv/Afshin Nahian Tripto-WebDev.pdf">CV</a></FloatRightWrapper>
             <MenuItem to="/skills">Skills</MenuItem>
             <MenuItem to="/projects">Projects</MenuItem>
-            <a href="mailto:afsintripto@gmail.com">Hire Me</a>
+            <FloatRightWrapper><a href="mailto:afsintripto@gmail.com">Hire Me</a></FloatRightWrapper>
             <MenuItem to="/about">About Me</MenuItem>
             <DarkModeButton />
           </Stack>
