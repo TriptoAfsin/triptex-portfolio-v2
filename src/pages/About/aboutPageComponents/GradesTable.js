@@ -35,7 +35,7 @@ function GradesTable() {
             </Tr>
             <Tr>
               <Td>BSc</Td>
-              <Td><a href="https://www.butex.edu.bd/" target={"_blank"} style={{color: "#3592f0"}}>BUTEX (Dhaka)</a></Td>
+              <Td><a href="https://www.butex.edu.bd/" target={"_blank"} style={{color: "#3592f0"}} rel="noreferrer">BUTEX (Dhaka)</a></Td>
               <Td >GPA 3.73*</Td>
             </Tr>
           </Tbody>

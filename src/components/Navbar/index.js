@@ -126,6 +126,7 @@ function Navbar(props) {
             <MenuItem to="/">Home</MenuItem>
             <MenuItem to="/cv/Afshin Nahian Tripto-WebDev.pdf">CV</MenuItem>
             <MenuItem to="/skills">Skills</MenuItem>
+            <MenuItem to="/projects">Projects</MenuItem>
             <a href="mailto:afsintripto@gmail.com">Hire Me</a>
             <MenuItem to="/about">About Me</MenuItem>
             <DarkModeButton />
