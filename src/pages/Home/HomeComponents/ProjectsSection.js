@@ -187,7 +187,7 @@ function ProjectSection() {
               _hover={{ background: "#2d2f33" }}
               leftIcon={<HiPlusCircle size="24" color={"#FFFFFF"} />}
             >
-              Load More
+              View More
             </Button>
           </Link>
         </Box>

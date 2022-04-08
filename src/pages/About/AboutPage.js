@@ -40,7 +40,7 @@ function AboutPage() {
         <FloatRightWrapper>
         <Box display={"flex"} flexDir={"column"} ml={[5,0,8,10]}>
           <Heading fontSize={30} mb={5} textAlign={['center','center','left','left']} mt={[5,5,0,0]}>
-            A Curious Sole
+            A Curious Soul
           </Heading>
           <Text>
             The joy of learning always fascinated me, from my early age I was
