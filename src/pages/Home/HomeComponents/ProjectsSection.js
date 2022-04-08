@@ -181,6 +181,7 @@ function ProjectSection() {
           <Box display={"flex"} alignItems={"center"} flexDir={"column"} mt={[10,10,16,20]}>
           <Link to="/projects">
             <Button
+              color={colorMode === "dark" ? "white" : "white"}
               borderRadius={16}
               background={"black"}
               padding={8}

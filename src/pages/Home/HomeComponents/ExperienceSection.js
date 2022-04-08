@@ -38,7 +38,7 @@ function ExperienceSection() {
         time: "(2018 - ?)",
         designation: "Founder",
         body: `I've founded BUTEX NoteBOT in 2018, it's a 24x7 educational content delivery chatbot.Through this time it has served thousands of students with their studies`,
-        link: "https://www.deliveryhobe.com/",
+        link: "https://github.com/TriptoAfsin/notebot-engine-v1",
         gradColor1: '#23a455',
         gradColor2: '#3bad67'
       },
