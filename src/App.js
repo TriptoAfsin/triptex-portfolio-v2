@@ -5,9 +5,10 @@ import ScrollToTopHandler from "./utils/hooks/ScrollToTopHandler";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import FrontPage from "./pages/Home/FrontPage";
-import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import SkillsPage from "./pages/Skills";
+import AboutPage from "./pages/About/AboutPage";
+import ProjectPage from "./pages/ProjectsPage";
 
 function App() {
   console.count("app renderd");
@@ -36,9 +37,8 @@ function App() {
           <ScrollToTopHandler />
           <Routes>
             <Route path="/" exact element={<FrontPage />}></Route>
-            <Route path="/cv" exact element={<FrontPage />}></Route>
-            <Route path="/projects" exact element={<FrontPage />}></Route>
-            <Route path="/contact" exact element={<ContactPage />}></Route>
+            <Route path="/projects" exact element={<ProjectPage />}></Route>
+            <Route path="/about" exact element={<AboutPage />}></Route>
             <Route path="/skills" exact element={<SkillsPage />}></Route>
             <Route path="/chatraChatExpanded" element={<FrontPage />}></Route>
             {/* /*404 route*/}

@@ -64,7 +64,6 @@ function ExperienceSection() {
         id={id}
         justifyContent={"center"}
         alignItems={"center"}
-        
       >
         <Heading
           color={colorMode === "dark" ? "#fafafb" : "#fafafb"}
@@ -82,10 +81,10 @@ function ExperienceSection() {
           {designation}
         </Text>
         <Text color={colorMode === "dark" ? "#fafafb" : "#fafafb"} background={'black'} paddingX={2} mt={1}>{time}</Text>
-        <Text mt={1} color={colorMode === "dark" ? "#fafafb" : "#fafafb"} ml={2} mr={2} height={'100px'}>
+        <Text mt={1} color={colorMode === "dark" ? "#fafafb" : "#fafafb"} ml={2} mr={2} height={'100px'} padding={2}>
           {body}
         </Text>
-        <Button as={"a"} href={link} cursor={"pointer"} mt={2}>
+        <Button as={"a"} href={link} cursor={"pointer"} mt={5}>
           Learn More
         </Button>
       </Box>

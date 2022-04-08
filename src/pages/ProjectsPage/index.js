@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useGetMyProjectsQuery } from "../../../redux/slices/rtkApiSlice";
+import { useGetMyProjectsQuery } from "../../redux/slices/rtkApiSlice";
 import {
   Box,
   Heading,
@@ -8,21 +8,18 @@ import {
   Text,
   Grid,
   IconButton,
-  Button,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 
 import {
   FloatInWrapper,
   LoaderSpinner1,
-} from "../../../components/Navbar/Navbar.style";
+} from "../../components/Navbar/Navbar.style";
 
 import { AiOutlineLink } from "react-icons/ai";
-import { HiPlusCircle } from "react-icons/hi";
 // //config import
 // import portfolioInfo from "../../../config";
 
-function ProjectSection() {
+function ProjectPage() {
   const { colorMode } = useColorMode();
 
   //api data
@@ -49,7 +46,7 @@ function ProjectSection() {
           maxWidth={"320px"}
           id={id}
           boxShadow={"0px 10px 15px -3px rgba(0,0,0,0.5)"}
-          background={colorMode === "dark" ? "#2d2f33" : "#fafafb"}
+          background={colorMode === "dark" ? "#2d2f33" : "#18181a"}
           display={"flex"}
           flexDirection={"column"}
           borderRadius={10}
@@ -62,10 +59,10 @@ function ProjectSection() {
             borderRadius={10}
             display={["block", "block", "block", "block"]}
           />
-          <Text mt={2} fontWeight={"semibold"} padding={2} ml={2}>
+          <Text mt={2} fontWeight={"semibold"} padding={2} ml={2} color={colorMode === "dark" ? "#fafafb" : "#fafafb"}>
             {title}
           </Text>
-          <Text padding={2} ml={2} height={"100px"}>
+          <Text padding={2} ml={2} height={"100px"} color={colorMode === "dark" ? "#fafafb" : "#fafafb"}>
             {body}
           </Text>
           <Box display={"flex"} flexDir={"row"} justifyContent={"space-around"}>
@@ -121,7 +118,7 @@ function ProjectSection() {
 
   return (
     <Box
-      background={colorMode === "dark" ? "#ffa500" : "#ffa500"}
+      background={colorMode === "dark" ? "#18181a" : "#fafafb"}
       paddingTop={[5, 5, 5, 10]}
       paddingBottom={[10, 10, 10, 20]}
       display={"flex"}
@@ -131,7 +128,7 @@ function ProjectSection() {
     >
       <Heading
         textAlign={"center"}
-        color={colorMode === "dark" ? "#fafafb" : "#fafafb"}
+        color={colorMode === "dark" ? "#fafafb" : "#18181a"}
       >
         Projects
       </Heading>
@@ -148,21 +145,8 @@ function ProjectSection() {
       >
         {isLoading || !data ? (
           <LoaderSpinner1 />
-        ) : data.length > 4 ? (
-          <>
-            {data.slice(0, 4).map(item => (
-              <CardComponent
-                id={item.id}
-                cardCoverImg={item.img}
-                title={item.name}
-                body={item.about}
-                tags={item.techUsed}
-                link={item.link}
-              />
-            ))}
-          </>
         ) : (
-          <>
+            <>
             {data.map(item => (
               <CardComponent
                 id={item.id}
@@ -176,25 +160,8 @@ function ProjectSection() {
           </>
         )}
       </Grid>
-      {
-        data && data.length > 4 ? (
-          <Box display={"flex"} alignItems={"center"} flexDir={"column"} mt={[10,10,16,20]}>
-          <Link to="/projects">
-            <Button
-              borderRadius={16}
-              background={"black"}
-              padding={8}
-              _hover={{ background: "#2d2f33" }}
-              leftIcon={<HiPlusCircle size="24" color={"#FFFFFF"} />}
-            >
-              Load More
-            </Button>
-          </Link>
-        </Box>
-        ): null
-      }
     </Box>
   );
 }
 
-export default ProjectSection;
+export default ProjectPage;

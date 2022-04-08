@@ -193,9 +193,11 @@ function SkillsPage() {
   return (
     <>
       <Box>
+      <FloatInWrapper>
         <Heading textAlign={"center"} mt={5} mb={10}>
           My Skills 🗃️
         </Heading>
+        </FloatInWrapper>
         <Grid
           templateColumns={[
             "repeat(1, 1fr)",

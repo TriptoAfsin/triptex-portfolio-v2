@@ -94,7 +94,7 @@ const NavBarContainer = ({ children, ...props }) => {
       color={["white", "white", "primary.700", "primary.700"]}
       boxShadow="0px 2px 10px 5px rgba(33, 37, 43, 0.3)"
       // position="fixed"
-
+      style={{position: "sticky", top: 0, zIndex: 5}}
       {...props}
     >
       {children}
@@ -126,7 +126,7 @@ function Navbar(props) {
             <MenuItem to="/">Home</MenuItem>
             <MenuItem to="/cv/Afshin Nahian Tripto-WebDev.pdf">CV</MenuItem>
             <MenuItem to="/skills">Skills</MenuItem>
-            <MenuItem to="mailto:afsintripto@gmail.com">Hire Me</MenuItem>
+            <a href="mailto:afsintripto@gmail.com">Hire Me</a>
             <MenuItem to="/about">About Me</MenuItem>
             <DarkModeButton />
           </Stack>
