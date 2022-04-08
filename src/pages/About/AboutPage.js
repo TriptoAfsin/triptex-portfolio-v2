@@ -69,7 +69,7 @@ function AboutPage() {
               mr={2}
               background={"#4949f3"}
               color={colorMode === "dark" ? "#f3f3f4" : "#f3f3f4"}
-            >I made an educational content delivering chatbot name
+            >I made an educational content delivering chatbot named
             <a href="https://github.com/TriptoAfsin/notebot-engine-v1">"BUTEX NoteBOT"</a></Text>
           </Text>
           <Text>And through this period of time it has served more than <Text
