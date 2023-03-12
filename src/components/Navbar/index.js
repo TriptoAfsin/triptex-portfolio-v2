@@ -2,18 +2,17 @@ import React, { useState } from "react";
 import { Box, Text, Stack, Image, Flex } from "@chakra-ui/react";
 import { MdClose } from "react-icons/md";
 import { BiMenuAltLeft } from "react-icons/bi";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import logo from "../../imgs/logo192.png";
-import {
-  FloatLeftWrapper,
-  FloatRightWrapper,
-} from "./Navbar.style";
+import { motion } from "framer-motion";
+import { FloatLeftWrapper, FloatRightWrapper } from "./Navbar.style";
 import DarkModeButton from "../DarkModeButton";
+import { useLocation } from "react-router-dom";
 
 const Logo = props => {
   return (
     <FloatLeftWrapper>
-      <Box {...props} display={'flex'} flexDirection={'row'}>
+      <Box {...props} display={"flex"} flexDirection={"row"}>
         <Link to="/">
           <Image
             src={logo}
@@ -29,14 +28,18 @@ const Logo = props => {
 
 const MenuToggle = ({ toggle, isOpen }) => {
   return (
-    <Box display={{ base: "block", md: "none" }} onClick={toggle} transition='ease-in 1s'>
+    <Box
+      display={{ base: "block", md: "none" }}
+      onClick={toggle}
+      transition="ease-in 1s"
+    >
       {isOpen ? (
-          <FloatLeftWrapper>
-        <MdClose size="25" color="#f8f8f8" />
+        <FloatLeftWrapper>
+          <MdClose size="25" color="#f8f8f8" />
         </FloatLeftWrapper>
       ) : (
         <FloatRightWrapper>
-        <BiMenuAltLeft size="30" />
+          <BiMenuAltLeft size="30" />
         </FloatRightWrapper>
       )}
     </Box>
@@ -45,13 +48,18 @@ const MenuToggle = ({ toggle, isOpen }) => {
 
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
-    <FloatRightWrapper>
+    <>
       <Link to={to}>
-        <Text display="block" {...rest}>
+        <Text
+          display="block"
+          {...rest}
+          paddingX={[24, 3, 3, 3]}
+          paddingY={[2, 2, 2, 2]}
+        >
           {children}
         </Text>
       </Link>
-    </FloatRightWrapper>
+    </>
   );
 };
 
@@ -94,7 +102,7 @@ const NavBarContainer = ({ children, ...props }) => {
       color={["white", "white", "primary.700", "primary.700"]}
       boxShadow="0px 2px 10px 5px rgba(33, 37, 43, 0.3)"
       // position="fixed"
-      style={{position: "sticky", top: 0, zIndex: 5}}
+      style={{ position: "sticky", top: 0, zIndex: 5 }}
       {...props}
     >
       {children}
@@ -104,12 +112,29 @@ const NavBarContainer = ({ children, ...props }) => {
 
 function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
+  let location = useLocation();
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
     <>
-      <NavBarContainer {...props}>
+      <NavBarContainer
+        {...props}
+        as={motion.div}
+        initial={{
+          y: -100,
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            ease: "easeOut",
+            duration: 0.3,
+          },
+        }}
+        key={isOpen}
+      >
         <Logo />
 
         <Box
@@ -123,12 +148,46 @@ function Navbar(props) {
             direction={["column", "row", "row", "row"]}
             pt={[4, 4, 0, 0]}
           >
-            <MenuItem to="/">Home</MenuItem>
-            <FloatRightWrapper><a href="/cv/Afshin Nahian Tripto-WebDev.pdf">CV</a></FloatRightWrapper>
-            <MenuItem to="/skills">Skills</MenuItem>
-            <MenuItem to="/projects">Projects</MenuItem>
-            <FloatRightWrapper><a href="mailto:afsintripto@gmail.com">Hire Me</a></FloatRightWrapper>
-            <MenuItem to="/about">About Me</MenuItem>
+            <Box
+              bg={location?.pathname === "/" ? "#18181a" : "transparent"}
+              borderRadius={10}
+            >
+              <MenuItem to="/" onClick={() => setIsOpen(false)}>
+                Home
+              </MenuItem>
+            </Box>
+            <Box>
+              <a href="/cv/Afshin Nahian Tripto-WebDev.pdf">CV</a>
+            </Box>
+            <Box
+              bg={location?.pathname === "/skills" ? "#18181a" : "transparent"}
+              borderRadius={10}
+            >
+              <MenuItem to="/skills" onClick={() => setIsOpen(false)}>
+                Skills
+              </MenuItem>
+            </Box>
+            <Box
+              bg={
+                location?.pathname === "/projects" ? "#18181a" : "transparent"
+              }
+              borderRadius={10}
+            >
+              <MenuItem to="/projects" onClick={() => setIsOpen(false)}>
+                Projects
+              </MenuItem>
+            </Box>
+            <Box
+              bg={location?.pathname === "/about" ? "#18181a" : "transparent"}
+              borderRadius={10}
+            >
+              <MenuItem to="/about" onClick={() => setIsOpen(false)}>
+                About Me
+              </MenuItem>
+            </Box>
+            <Box>
+              <a href="mailto:afsintripto@gmail.com">Hire Me</a>
+            </Box>
             <DarkModeButton />
           </Stack>
         </Box>

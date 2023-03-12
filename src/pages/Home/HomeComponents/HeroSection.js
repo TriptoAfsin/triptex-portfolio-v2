@@ -78,13 +78,13 @@ function HeroSection() {
           </Box>
           <Heading mt={5}>Hi, I'm Afshin Nahian Tripto</Heading>
           <Text mt={2}>Webdeveloper || Student || Learner</Text>
-          <Text mt={5} lineHeight={2} mr={[0, 0, 10, 10]}>
+          <Text mt={5} lineHeight={2} mr={[2, 2, 10, 10]}>
             {" "}
             I’m a{" "}
             <Text
               display={"inline"}
-              ml={2}
-              mr={2}
+              ml={1}
+              mr={1}
               background={"#4949f3"}
               color={colorMode === "dark" ? "#f3f3f4" : "#f3f3f4"}
             >
