@@ -4,7 +4,7 @@ import useWindowDimensions from "../../utils/hooks/ResizeHandler";
 import { useColorMode } from "@chakra-ui/react";
 
 
-function ParticleComponent({onCLick=true, onHover=false, speed=1.5, desktopAmount=20, mobileAmmount=10, area=900}) {
+function ParticleComponent({onCLick=true, onHover=false, speed=1.5, desktopAmount=15, mobileAmmount=8, area=900}) {
     const { width } = useWindowDimensions();
     const { colorMode } = useColorMode();
   return (
@@ -38,7 +38,7 @@ function ParticleComponent({onCLick=true, onHover=false, speed=1.5, desktopAmoun
             size: 40,
           },
           push: {
-            quantity: 4,
+            quantity: 3,
           },
           repulse: {
             distance: 50,
