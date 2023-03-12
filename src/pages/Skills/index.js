@@ -26,6 +26,9 @@ import {
   SiMicrosoftpowerpoint,
   SiFigma,
   SiAdobeillustrator,
+  SiTypescript,
+  SiDocker,
+  SiRedux
 } from "react-icons/si";
 import { AiFillHtml5 } from "react-icons/ai";
 import {
@@ -46,12 +49,24 @@ const frontendTech = [
     iconButton: <SiJavascript size="22" color={"#FFFFFF"} />,
   },
   {
+    techName: "Next JS",
+    iconButton: <SiNextdotjs size="22" color={"#FFFFFF"} />,
+  },
+  {
+    techName: "TypeScript",
+    iconButton: <SiTypescript size="22" color={"#FFFFFF"} />,
+  },
+  {
     techName: "React",
     iconButton: <SiReact size="22" color={"#FFFFFF"} />,
   },
   {
-    techName: "Next JS",
-    iconButton: <SiNextdotjs size="22" color={"#FFFFFF"} />,
+    techName: "Redux",
+    iconButton: <SiRedux size="22" color={"#FFFFFF"} />,
+  },
+  {
+    techName: "React Native",
+    iconButton: <SiReact size="22" color={"#FFFFFF"} />,
   },
   {
     techName: "Wordpress",
@@ -78,6 +93,10 @@ const ciTech = [
   {
     techName: "Linux",
     iconButton: <FaLinux size="22" color={"#FFFFFF"} />,
+  },
+  {
+    techName: "Docker",
+    iconButton: <SiDocker size="22" color={"#FFFFFF"} />,
   },
   {
     techName: "CLI",
@@ -259,7 +278,6 @@ function SkillsPage() {
           </Heading>
           <UnorderedList>
             <ListItem mt={2}>Languages: Java, Python, C</ListItem>
-            <ListItem>Framework / Libs: React Native, Flutter</ListItem>
           </UnorderedList>
         </Box>
       </Box>

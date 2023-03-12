@@ -35,11 +35,11 @@ const MenuToggle = ({ toggle, isOpen }) => {
     >
       {isOpen ? (
         <FloatLeftWrapper>
-          <MdClose size="25" color="#f8f8f8" />
+          <MdClose size="30" color="#f8f8f8" />
         </FloatLeftWrapper>
       ) : (
         <FloatRightWrapper>
-          <BiMenuAltLeft size="30" />
+          <BiMenuAltLeft size="36" />
         </FloatRightWrapper>
       )}
     </Box>
@@ -188,10 +188,10 @@ function Navbar(props) {
             <Box>
               <a href="mailto:afsintripto@gmail.com">Hire Me</a>
             </Box>
-            <DarkModeButton />
+              <DarkModeButton display={["none", "none", "flex", "flex"]} borderRadius={10}/>
           </Stack>
         </Box>
-
+          <DarkModeButton display={["flex", "flex", "none", "none"]} borderRadius={'50%'} ml={isOpen ? 0 : 'auto'} mr={5}/>
         <MenuToggle toggle={toggle} isOpen={isOpen} />
       </NavBarContainer>
     </>

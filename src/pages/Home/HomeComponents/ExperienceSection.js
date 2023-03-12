@@ -51,7 +51,7 @@ function ExperienceSection() {
       link: "https://www.bondipathshala.com.bd/",
       gradColor1: "#4978f9",
       gradColor2: "#275cf1",
-      tags: ["Wordpress", "cPanel"],
+      tags: ["Wordpress", "cPanel", "CSS"],
     },
   ];
 
@@ -108,10 +108,12 @@ function ExperienceSection() {
           flexDir={"row"}
           justifyContent={"center"}
           alignItems={"center"}
+          justifyItems={'center'}
+          justifySelf={'center'}
         >
           <Grid
             templateColumns={[
-              "repeat(4, 1fr)",
+              "repeat(3, 1fr)",
               "repeat(4, 1fr)",
               "repeat(5, 1fr)",
               "repeat(5, 1fr)",

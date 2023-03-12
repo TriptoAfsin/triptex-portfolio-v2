@@ -13,6 +13,7 @@ import {
   SiReact,
   SiGithub,
   SiNextdotjs,
+  SiTypescript
 } from "react-icons/si";
 //config import
 import portfolioInfo from "../../../config";
@@ -133,6 +134,23 @@ function HeroSection() {
               mr={2}
             >
               <Text fontSize={14} fontWeight={"bold"}color={"#FFFFFF"}>
+                TypeScript
+              </Text>
+              <SiTypescript size="22" color={"#FFFFFF"} />
+            </Box>
+            <Box
+              borderRadius={20}
+              minWidth={"130px"}
+              maxWidth={"150px"}
+              height={"40px"}
+              background={"black"}
+              display={"flex"}
+              flexDir={"row"}
+              alignItems={"center"}
+              justifyContent={"space-evenly"}
+              mr={2}
+            >
+              <Text fontSize={14} fontWeight={"bold"}color={"#FFFFFF"}>
                 React
               </Text>
               <SiReact size="24" color={"#FFFFFF"} />
@@ -171,7 +189,7 @@ function HeroSection() {
               </Text>
               <FaNodeJs size="24" color={"#FFFFFF"} />
             </Box>
-            <Box
+            {/* <Box
               borderRadius={20}
               minWidth={"130px"}
               maxWidth={"150px"}
@@ -187,7 +205,7 @@ function HeroSection() {
                 Wordpress
               </Text>
               <FaWordpress size="24" color={"#FFFFFF"} />
-            </Box>
+            </Box> */}
             <Box
               borderRadius={20}
               minWidth={"130px"}
