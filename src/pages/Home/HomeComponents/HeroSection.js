@@ -40,7 +40,7 @@ function HeroSection() {
       flexDir={"row"}
       justifyContent={"space-evenly"}
     >
-        <ParticleComponent onCLick={true} onHover={false} speed={1.5} desktopAmount={20} mobileAmmount={10} area={900}/>
+        {/* <ParticleComponent onCLick={true} onHover={false} speed={1.5} desktopAmount={20} mobileAmmount={10} area={900}/> */}
       <Box display={"flex"} flexDir={"row"} mt={[0,0,0,5]}>
       <FloatLeftWrapper >
         <Image
