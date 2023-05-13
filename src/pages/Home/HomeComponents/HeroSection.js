@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 import { FaLinux } from "react-icons/fa";
 import { BsFillArrowUpRightCircleFill } from "react-icons/bs";
-import { FaNodeJs, FaWordpress } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
 import {
   SiJavascript,
@@ -22,7 +22,7 @@ import {
     FloatLeftWrapper,
     FloatRightWrapper,
   } from "../../../components/Navbar/Navbar.style";
-import ParticleComponent from "../ParticleComponent";
+// import ParticleComponent from "../ParticleComponent";
 
 const githubUrl = portfolioInfo.socialLinks.socialGithub;
 const facebookUrl = portfolioInfo.socialLinks.socialFacebook;
